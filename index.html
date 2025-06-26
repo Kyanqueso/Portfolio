@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8", name="viewport", content="width=device-width">
+        <title>Kyan's Portfolio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="design.css">
+    </head>
+    <body style="background-color: #312C2C;">
+        
+        <!-- Home Section -->
+        <nav id="menu-bar" class="w-75 mx-auto d-flex justify-content-between align-items-center 
+            p-3 px-4 rounded-3 mt-5 fw-bold" style="background-color: #5E5D5D; color: white;">
+            <a href="#home" class="text-white text-decoration-none ms-2">Home</a>
+            <a href="#projects" class="text-white text-decoration-none">Projects</a>
+            <a href="#ui-design" class="text-white text-decoration-none">UI Designs</a>
+            <a href="#skills" class="text-white text-decoration-none">Skills</a>
+            <a href="#extras" class="text-white text-decoration-none">Extras</a>
+            <a href="#contact" class="text-white text-decoration-none me-2">Contact</a>
+        </nav>
+        <div id="home" class="mb-5">
+            <section class="d-flex flex-column text-center my-5">
+                <h1 class="big">Hi! I'm Kyan!</h1>
+                <h4 class="text-white">3rd year BS Computer Science Student</h4>
+                <h4 class="text-white">University of Santo Tomas</h4>
+                <h4 class="text-white">Specializing in <span id="ds">Data Science</span></h4>
+            </section>
+            <section class="container my-5">
+                <div class="row justify-content-center g-3">
+                    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                        <a href="So_Resume .pdf" target="_blank" rel="noopener noreferrer" 
+                        class="essential py-3 px-4 text-black fw-bold text-center w-75 mx-auto d-block text-decoration-none">
+                            Resume <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                        <a href="https://www.linkedin.com/in/kyan-so/" target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="essential py-3 px-4 text-black fw-bold text-center w-75 mx-auto d-block text-decoration-none">
+                            LinkedIn <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                        <a href="https://github.com/Kyanqueso" target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="essential py-3 px-4 text-black fw-bold text-center w-75 mx-auto d-block text-decoration-none">
+                            GitHub <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="about" class="w-75 my-5 mx-auto p-5">
+            <h1 class="big text-center mb-2">About Me</h1>
+            <p class="text-justify text-white mb-2">
+                I am Kyan Charles So, 20 years old and in my 3rd year of BS in Computer Science 
+                at UST—a highly motivated student with a passion for lifelong learning. I have a 
+                strong programming and problem-solving skill set and am looking for ways to take 
+                it a step further. Moreover, my ability to adapt to any situation and relentless 
+                drive for excellence will prove valuable in any circumstance. And finally, I am 
+                also eager to share my skills and talents to any company or organization seeking 
+                a dedicated and results-driven professional.
+            </p>
+        </div>
+
+        <!-- Projects Section -->
+
+        <div id="projects" class="w-100 mx-auto my-5 p-5">
+
+            <h1 class="big text-center">Projects</h1>
+            <!--Project Card 1-->
+            <div class="row proj-card mx-auto my-5 p-4" style="background-color: #312C2C;">
+                <div class="col">
+                    <h2 class="text-white">Toy Tracker</h2>
+                    <p class="text-white text-justify">The Toy Tracker App (a personal project) is an offline toy tracking application 
+                        that helps users manage their toy collection with ease. It features a clean, user-friendly interface for adding, 
+                        viewing, and updating toy details, including images, costs, suppliers, and payment status. With built-in 
+                        search, filtering, and detailed overlays, Toy-nado makes organizing and visualizing toy data simple and 
+                        efficient.</p>
+                    <p class="text-white d-flex align-items-center">
+                        <span class="fw-bold me-3">Made with:</span>
+                        <span class="d-flex flex-wrap gap-4">
+                            <span>Java (JavaFX)</span>
+                            <span>CSS</span>
+                            <span>SQL (SQLite)</span>
+                        </span>
+                    </p>
+                    <button class="py-2 m-2 text-black fw-bold text-center w-50 mx-auto"
+                    onclick="window.open('https://github.com/Kyanqueso/ToyTracker', '_blank');">
+                        Source Code <i class="fab fa-github"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <div class="custom-img2-container">
+                        <img src="1 Toynado.png" class="img-fluid custom-img">
+                    </div>
+                </div>
+            </div>
+            <!--Project Card 2-->
+            <div class="row proj-card mx-auto my-5 p-4" style="background-color: #312C2C;">
+                <div class="col">
+                    <h2 class="text-white">Election System Website</h2>
+                    <p class="text-white text-justify">
+                        The Election System (made with 2 other friends) is a responsive, user-friendly platform 
+                        designed for managing simple elections. It features secure functionalities such as 
+                        real-time results, CAPTCHA protection, password encryption, SQL injection prevention, 
+                        and session handling, with three user roles: administrator, organizer, and voter. 
+                        Administrators and organizers manage the election setup and users, while voters can 
+                        easily cast and view votes once registered or added to the system.
+                    </p>
+                    <p class="text-white d-flex align-items-center">
+                        <span class="fw-bold me-3">Made with:</span>
+                        <span class="d-flex flex-wrap gap-4">
+                            <span>Java</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Javascript</span>
+                            <span>Bootstrap</span>
+                            <span>SQL</span>
+                        </span>
+                    </p>
+                    <button class="py-2 m-2 text-black fw-bold text-center w-50 mx-auto"
+                    onclick="window.open('https://github.com/Kyanqueso/ElectionSystem', '_blank');">
+                        Source Code <i class="fab fa-github"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <div class="custom-img2-container">
+                        <img src="2 Election System.png" class="img-fluid custom-img">
+                    </div>
+                </div>
+            </div>
+            <!--Project Card 3-->
+            <div class="row proj-card mx-auto my-5 p-4" style="background-color: #312C2C;">
+                <div class="col">
+                    <h2 class="text-white">Gym Website (Front End)</h2>
+                    <p class="text-white text-justify">
+                        A simple front-end website made with a friend with a gym theme. It's login process
+                        is just simple and is just based from a list of users in a csv file. Moreover, it has
+                        session handling and implements responsive web design.
+                    </p>
+                    <p class="text-white d-flex align-items-center">
+                        <span class="fw-bold me-3">Made with:</span>
+                        <span class="d-flex flex-wrap gap-4">
+                            <span>Java</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Javascript</span>
+                        </span>
+                    </p>
+                    <button class="py-2 m-2 text-black fw-bold text-center w-50 mx-auto"
+                    onclick="window.open('https://github.com/Kyanqueso/GymWebsite', '_blank');">
+                        Source Code <i class="fab fa-github"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <div class="custom-img2-container">
+                        <img src="3 Gym Website.png" class="img-fluid custom-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--UI Designs-->
+
+        <div id="ui-design">
+            <h1 class="big text-center">UI Designs</h1>
+            <div class="row w-75 mx-auto my-5">
+                <div class="col m-2 p-5 ui-card" style="background-color: #5E5D5D;">
+                    <h2 class="text-white text-center p-3">Envirofund UI</h2>
+                    <img src="4 Envirofund.png" class="img-fluid custom-img2">
+                    <p class="text-white text-justify p-3">
+                        A climate change donation mobile app UI design that I made in Human-Computer-Interaction class.
+                        It emphasizes a nature theme to make users inspired in taking action to help the environment.
+                        Additionally, it has an animation to showcase the seamless user-flow.
+                    </p>
+                    <div class="d-flex justify-content-center p-1">
+                        <button class="py-2 m-2 text-black fw-bold text-center w-50"
+                        onclick="window.open('https://www.figma.com/design/YSGqKYZRg77V0ZCYfq2X2w/EnviroFund-Mobile?node-id=0-1&t=lT5BxLVoAo00dew3-1', '_blank');">
+                            Figma File <i class="fab fa-figma"></i>
+                        </button>
+                    </div>
+                </div>
+               
+                <div class="col m-2 p-5 ui-card" style="background-color: #5E5D5D;">
+                    <h2 class="text-white text-center p-3">Gym Website UI</h2>
+                    <img src="5 Gym Website.png" class="img-fluid custom-img2">
+                    <p class="text-white text-justify p-3">A simple, but eye-catching gym website UI made with a friend.
+                        Moreover, the dark theme brings a sleek, modern vibe that feels energetic and intense—perfect for a fitness brand. 
+                        It helps highlight bright accents like buttons and images, making the content pop while reducing eye strain for users.
+                    </p>
+                    <div class="d-flex justify-content-center p-1">
+                        <button class="py-2 m-2 text-black fw-bold text-center w-50"
+                        onclick="window.open('https://www.figma.com/design/5qXVRwE8JbaLuniN3RpINC/WEBSITE-GYM?t=uT1Gknp2QChOq7OQ-1', '_blank');">
+                            Figma File <i class="fab fa-figma"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row ui-card w-75 mx-auto my-5">
+                <div class="col m-2 p-5 ui-card" style="background-color: #5E5D5D;">
+                    <h2 class="text-white text-center p-3">Bayan-X UI</h2>
+                    <img src="6 Bayan-X.png" class="img-fluid custom-img2">
+                    <p class="text-white text-justify p-3">The UI of our proposed app in a hackathon. Me and 4
+                        other friends contributed in building the Ui, and it has also been fitted with an animation
+                        for user experience. Finally, the color scheme is in sync with the theme "Bayanihan" making
+                        it nice to look at.
+                    </p>
+                    <div class="d-flex justify-content-center p-1">
+                        <button class="py-2 m-2 text-black fw-bold text-center w-50"
+                        onclick="window.open('https://www.figma.com/design/8JgqMTELAtAmRvJCQ2VkWa/Bayan-X?node-id=0-1&t=uT1Gknp2QChOq7OQ-1', '_blank');">
+                            Figma File <i class="fab fa-figma"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col m-2 p-5 ui-card" style="background-color: #5E5D5D;">
+                    <h2 class="text-white text-center p-3">Website Portfolio UI</h2>
+                    <img src="7 Portfolio.png" class="img-fluid custom-img2">
+                    <p class="text-white text-justify p-3">The UI design for my website portfolio. It exhibits 
+                        a simple and clean look, with the goal to make it easy for visitors to navigate. Moreover,
+                        the consistent color scheme I applied makes it more smooth and visually appealing.
+                    </p>
+                    <div class="d-flex justify-content-center p-1">
+                        <button class="py-2 m-2 text-black fw-bold text-center w-50"
+                        onclick="window.open('https://www.figma.com/design/Fs4uOKtLYNaT6fkHMvghDd/Website-Portfolio?node-id=0-1&t=uT1Gknp2QChOq7OQ-1', '_blank');">
+                            Figma File <i class="fab fa-figma"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+
+        <div id="skills" class="p-5" style="background-color: black;">
+            <h1 class="big text-center p-3">Skills</h1>
+            <div class="container py-4">
+
+            <!-- Skill Card 1-->
+
+            <div class="row w-75 mx-auto rounded shadow p-4 mb-5" style="background-color: #5E5D5D;">
+                <div class="col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
+                    <i class="fas fa-code me-2"></i>Languages
+                </div>
+                <div class="col-12 col-md-9">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Java <i class="fab fa-java float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Python <i class="fab fa-python float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            SQL <i class="fas fa-database float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            HTML <i class="fab fa-html5 float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            CSS <i class="fab fa-css3-alt float-end"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Skill Card 2-->
+
+            <div class="row w-75 mx-auto rounded shadow p-4 my-5" style="background-color: #5E5D5D;">
+                <div class="col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
+                    <i class="fas fa-wrench me-2"></i>Tools & Frameworks
+                </div>
+                <div class="col-12 col-md-9">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Bootstrap <i class="fab fa-bootstrap float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            GitHub <i class="fab fa-github float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Figma <i class="fab fa-figma float-end"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Skill Card 3-->
+
+            <div class="row w-75 mx-auto rounded shadow p-4 my-5" style="background-color: #5E5D5D;">
+                <div class="col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
+                    <i class="fas fa-boxes-stacked me-2"></i>Others
+                </div>
+                <div class="col-12 col-md-9">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Responsive Web Design <i class="fas fa-laptop me-1 float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Database Design <i class="fas fa-project-diagram float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Object-Oriented Proramming (OOP) <i class="fas fa-cogs float-end"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Extras -->
+
+        <div id="extras" class="my-5">
+            <h1 class="big text-center p-3">Extras</h1>
+            <!-- Education Card -->
+            <div class="card w-75 mx-auto my-5" style="background-color: #5E5D5D;">
+                <div class="card-header">
+                    <h2 class="card-title text-white fw-bold">Education: University of Santo Tomas</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                             BS Computer Science (2023 - 2027)
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Consistent Dean's Lister
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            CSS External Affairs Committee (Sep 2024 - May 2025)
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Project Management Committee, ICS Student Council (Sep 2024 - May 2025)
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            CSS Finance Committee (Sep 2023 - May 2024)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Certifications Card -->
+            <div class="card w-75 mx-auto my-5" style="background-color: #5E5D5D;">
+                <div class="card-header">
+                    <h2 class="card-title text-white fw-bold">Certifications</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                             Responsive Web Design (FreeCodeCamp)
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                             Assosicate Data Scientist (DataCamp)
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                             Github Foundations (DataCamp)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Hackathons -->
+            <div class="card w-75 mx-auto my-5" style="background-color: #5E5D5D;">
+                <div class="card-header">
+                    <h2 class="card-title text-white fw-bold">Hackathons</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Hackfest 2025 Horizon
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div id="contact" class="mt-5 p-5" style="background-color: black;">
+            <h1 class="big text-center p-3">Contact</h1>
+            <h4 class="text-center" style="color: #3AEF43;">Feel free to reach out through any of the channels below</h4>
+            <h4 class="text-center text-white">Email: charlesque404@gmail.com</h4>
+            <h4 class="text-center text-white pb-5">LinkedIn: 
+                <a id="li_link" href="https://www.linkedin.com/in/kyan-so-369a62326/" target="_blank" class="text-white">
+                    https://www.linkedin.com/in/kyan-so/
+                </a>
+            </h4>
+        </div>
+    </body>
+</html>
