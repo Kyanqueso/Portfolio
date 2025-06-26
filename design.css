@@ -1,0 +1,114 @@
+/* Hover animation for menu bar texts */
+#menu-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1.5px solid #ddd;
+}
+#menu-bar a:hover {
+  color: #C59137 !important;
+  transform: scale(1.1);
+  text-decoration: underline !important;
+}
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  #menu-bar {
+    position: static; /* disables sticky */
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 90% !important;
+    padding: 1rem !important;
+    
+  }
+  #menu-bar a {
+    padding: 0.5rem 0 !important;
+    width: 100%;
+     margin: 0 !important;
+  }
+  #menu-bar a:hover {
+    transform: none;
+  }
+}
+/* Text design in #home */
+.big {
+    font-size: 4rem;
+    color: #C59137; 
+}
+
+.text-justify{text-align: justify;}
+section h4 {font-size: 2rem;}
+
+#ds{
+    color: #3AEF43;
+    font-weight: bold;
+}
+
+/* Button Design in #home*/
+.essential, button{
+    background-color: #546EA6;
+    border:none;
+    border-radius: 2%;
+}
+.essential:hover, button:hover{
+  background-color: #3D5A99;
+  transform:scale(1.1);
+}
+
+/* Projects Section Design */
+
+#projects{
+  background-color: black;
+}
+.proj-card {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 2.5%;
+}
+
+.custom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid white;
+  border-radius: 5%;
+}
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .proj-card {
+    flex-direction: column;
+    width: 90%;
+    padding: 2rem 1rem;
+  }
+
+  .proj-card .col {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .custom-img {
+    max-height: 250px;
+  }
+}
+
+/* UI Designs Section Design */
+.ui-card{
+  border-radius: 3%;
+}
+/* To help landscape */
+.custom-img2-container {
+    width: 100%;
+    aspect-ratio: 16/9; 
+    overflow: hidden;
+    border-radius: 10px; 
+}
+.custom-img2 {
+    width: 100%;
+    height: 300px; 
+    object-fit: contain;
+    background-color: #1c1c1c; 
+    border-radius: 10px; 
+}
+#li_link:hover{
+  color:#3D5A99 !important;
+}
