@@ -1,3 +1,8 @@
+<!--
+    If click, will show tech stack
+    Fix UI Design Section
+-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,10 +11,27 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="design.css">
     </head>
+    <script>
+        function toggleProjectInfo(clickedCard) {
+            // Find the specific project description and tech stack within the clicked card
+            var projectDescription = clickedCard.querySelector('[id^="project-description-"]');
+            var techStack = clickedCard.querySelector('[id^="tech-stack-"]');
+
+            if (projectDescription.style.display !== 'none') {
+                // If description is visible, hide it and show tech stack
+                projectDescription.style.display = 'none';
+                techStack.style.display = 'block';
+            } else {
+                // If tech stack is visible, hide it and show description
+                projectDescription.style.display = 'block';
+                techStack.style.display = 'none';
+            }
+        }
+    </script>
     <body style="background-color: #312C2C;">
-        
         <!-- Home Section -->
         <nav id="menu-bar" class="w-75 mx-auto d-flex justify-content-between align-items-center 
             p-3 px-4 rounded-3 mt-5 fw-bold" style="background-color: #5E5D5D; color: white;">
@@ -70,178 +92,197 @@
         <div id="projects" class="w-100 mx-auto my-5 p-5">
 
             <h1 class="big text-center">Projects</h1>
+
             <!--Project Card 1-->
-            <div class="row proj-card mx-auto my-5 p-4" style="background-color: #312C2C;">
-                <div class="col">
-                    <h2 class="text-white">Toy Tracker</h2>
-                    <p class="text-white text-justify">The Toy Tracker App (a personal project) is an offline toy tracking application 
-                        that helps users manage their toy collection with ease. It features a clean, user-friendly interface for adding, 
-                        viewing, and updating toy details, including images, costs, suppliers, and payment status. With built-in 
-                        search, filtering, and detailed overlays, Toy-nado makes organizing and visualizing toy data simple and 
-                        efficient.</p>
-                    <p class="text-white d-flex align-items-center">
-                        <span class="fw-bold me-3">Made with:</span>
-                        <span class="d-flex flex-wrap gap-4">
-                            <span>Java (JavaFX)</span>
-                            <span>CSS</span>
-                            <span>SQL (SQLite)</span>
-                        </span>
-                    </p>
-                    <button class="py-2 m-2 text-black fw-bold text-center w-50 mx-auto"
-                    onclick="window.open('https://github.com/Kyanqueso/ToyTracker', '_blank');">
-                        Source Code <i class="fab fa-github"></i>
-                    </button>
-                </div>
-                <div class="col">
-                    <div class="custom-img2-container">
-                        <img src="1 Toynado.png" class="img-fluid custom-img">
+            <div class="card my-5 w-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
+                <div class="row proj-card">
+                    <div class="one col my-2 ms-3">
+                        <div class="card-body">
+                            <h4 class="card-title text-white">Simple Expense Tracker</h4>
+                            <p class="card-text text-white text-justify" id="project-description-1">
+                                This project is an interactive Streamlit application that allows users to upload
+                                personal expense data in CSV format, analyze trends, detect anomalies, and forecast future spending
+                                using machine learning models. Moreover, the Streamlit link can be found in the readme file in the github
+                                repository.
+                            </p>
+                            <div id="tech-stack-1" class="text-white" style="display: none;">
+                                <p class="fw-bold">Tech Stack Used:</p>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Python
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Streamlit
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Pandas, Numpy 
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Seaborn, Matplotlib
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Scikit-learn, XGBoost
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="card-btn py-2 my-2 mx-auto text-black fw-bold text-center w-75"
+                                    onclick="event.stopPropagation(); window.open('https://github.com/Kyanqueso/Expense-Tracker', '_blank');">
+                                Source Code <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col my-2 me-3">
+                        <img src="3 Expense Tracker.png" class="proj-img"
+                        alt="card-horizontal-image" style="min-height: 200px;">
                     </div>
                 </div>
             </div>
+
             <!--Project Card 2-->
-            <div class="row proj-card mx-auto my-5 p-4" style="background-color: #312C2C;">
-                <div class="col">
-                    <h2 class="text-white">Election System Website</h2>
-                    <p class="text-white text-justify">
-                        The Election System (made with 2 other friends) is a responsive, user-friendly platform 
-                        designed for managing simple elections. It features secure functionalities such as 
-                        real-time results, CAPTCHA protection, password encryption, SQL injection prevention, 
-                        and session handling, with three user roles: administrator, organizer, and voter. 
-                        Administrators and organizers manage the election setup and users, while voters can 
-                        easily cast and view votes once registered or added to the system.
-                    </p>
-                    <p class="text-white d-flex align-items-center">
-                        <span class="fw-bold me-3">Made with:</span>
-                        <span class="d-flex flex-wrap gap-4">
-                            <span>Java</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>Javascript</span>
-                            <span>Bootstrap</span>
-                            <span>SQL</span>
-                        </span>
-                    </p>
-                    <button class="py-2 m-2 text-black fw-bold text-center w-50 mx-auto"
-                    onclick="window.open('https://github.com/Kyanqueso/ElectionSystem', '_blank');">
-                        Source Code <i class="fab fa-github"></i>
-                    </button>
-                </div>
-                <div class="col">
-                    <div class="custom-img2-container">
-                        <img src="2 Election System.png" class="img-fluid custom-img">
+            <div class="card my-5 w-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
+                <div class="row proj-card">
+                    <div class="one col my-2 ms-3">
+                        <div class="card-body">
+                            <h4 class="card-title text-white">Toy Tracker</h4>
+                            <p class="card-text text-white text-justify" id="project-description-2">The Toy Tracker App (a personal project) is an offline toy tracking application 
+                            that helps users manage their toy collection with ease. It features a clean, user-friendly interface for adding, 
+                            viewing, and updating toy details, including images, costs, suppliers, and payment status. With built-in 
+                            search, filtering, and detailed overlays, Toy-nado makes organizing and visualizing toy data simple and 
+                            efficient.
+                            </p>
+                            <div id="tech-stack-2" class="text-white" style="display: none;">
+                                <p class="fw-bold">Tech Stack Used:</p>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Java (JavaFX)
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        CSS
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        SQLite
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="card-btn py-2 my-2 mx-auto text-black fw-bold text-center w-75"
+                                    onclick="event.stopPropagation(); window.open('https://github.com/Kyanqueso/ToyTracker', '_blank');">
+                                Source Code <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col my-2 me-3">
+                        <img src="1 Toynado.png" class="proj-img"
+                        alt="card-horizontal-image" style="min-height: 200px;">
                     </div>
                 </div>
             </div>
-            <!--Project Card 3-->
-            <div class="row proj-card mx-auto my-5 p-4" style="background-color: #312C2C;">
-                <div class="col">
-                    <h2 class="text-white">Gym Website (Front End)</h2>
-                    <p class="text-white text-justify">
-                        A simple front-end website made with a friend with a gym theme. It's login process
-                        is just simple and is just based from a list of users in a csv file. Moreover, it has
-                        session handling and implements responsive web design.
-                    </p>
-                    <p class="text-white d-flex align-items-center">
-                        <span class="fw-bold me-3">Made with:</span>
-                        <span class="d-flex flex-wrap gap-4">
-                            <span>Java</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>Javascript</span>
-                        </span>
-                    </p>
-                    <button class="py-2 m-2 text-black fw-bold text-center w-50 mx-auto"
-                    onclick="window.open('https://github.com/Kyanqueso/GymWebsite', '_blank');">
-                        Source Code <i class="fab fa-github"></i>
-                    </button>
+
+        <!--Project Card 3-->
+        <div class="card my-5 w-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
+            <div class="row proj-card">
+                <div class="one col my-2 ms-3">
+                    <div class="card-body">
+                        <h4 class="card-title text-white">Election System Website</h4>
+                        <p class="card-text text-white text-justify" id="project-description-3">The Election System (made with 2 other friends) is a responsive, user-friendly platform 
+                            designed for managing simple elections. It features secure functionalities such as 
+                            real-time results, CAPTCHA protection, password encryption, SQL injection prevention, 
+                            and session handling, with three user roles: administrator, organizer, and voter.
+                        </p>
+                        <div id="tech-stack-3" class="text-white" style="display: none;">
+                            <p class="fw-bold">Tech Stack Used:</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item bg-dark text-white fw-bold">
+                                    Java
+                                </li>
+                                <li class="list-group-item bg-dark text-white fw-bold">
+                                    HTML
+                                </li>
+                                <li class="list-group-item bg-dark text-white fw-bold">
+                                    CSS
+                                </li>
+                                <li class="list-group-item bg-dark text-white fw-bold">
+                                    Javascript
+                                </li>
+                                <li class="list-group-item bg-dark text-white fw-bold">
+                                    SQL
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="card-btn py-2 my-2 mx-auto text-black fw-bold text-center w-75"
+                                onclick="event.stopPropagation(); window.open('https://github.com/Kyanqueso/ElectionSystem', '_blank');">
+                            Source Code <i class="fab fa-github"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="col">
-                    <div class="custom-img2-container">
-                        <img src="3 Gym Website.png" class="img-fluid custom-img">
+                <div class="col my-2 me-3">
+                    <img src="2 Election System.png" class="proj-img"
+                    alt="card-horizontal-image" style="min-height: 200px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- UI Designs -->
+         <h1 class="big text-center">UI Designs</h1>
+         <div class="d-flex flex-row justify-content-center my-5">
+                <div class="ui card mx-3 px-2 py-3" style="width: 20rem;">
+                    <img src="4 Envirofund.png" class="card-img-top fixed-height" alt="Envirofund">
+                    <hr class="text-white">
+                    <div class="card-body d-flex flex-column"> 
+                        <h5 class="card-title text-white">Envirofund</h5>
+                        <p class="ui-txt card-text text-justify card-text-fixed-height flex-grow-1 smaller text-white"> A climate change donation mobile app UI design that I made in Human-Computer-Interaction class.
+                            It emphasizes a nature theme to make users inspired in taking action to help the environment.
+                            Additionally, it has an animation to showcase the seamless user-flow.
+                        </p>
+                        <button class="ui-btn py-2 my-2 mx-auto text-black fw-bold text-center w-75 mt-auto card-button-custom"
+                        onclick="window.open('https://www.figma.com/design/YSGqKYZRg77V0ZCYfq2X2w/EnviroFund-Mobile?node-id=0-1&t=lT5BxLVoAo00dew3-1', '_blank');"> 
+                            Figma File <i class="fab fa-figma"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="uicard2" class="ui card mx-3 px-2 py-3" style="width: 20rem;">
+                    <img src="5 Gym Website.png" class="card-img-top fixed-height" alt="Gym Website">
+                    <hr class="text-white">
+                    <div class="card-body d-flex flex-column"> 
+                        <h5 class="card-title text-white">Gym Website</h5>
+                        <p class="ui-txt card-text text-justify card-text-fixed-height flex-grow-1 smaller text-white"> A simple, but eye-catching gym website UI made with a friend.
+                            Moreover, the dark theme brings a sleek, modern vibe that feels energetic and intense—perfect for a fitness brand.
+                            It helps highlight bright accents like buttons and images, making the content pop while reducing eye strain for users.
+                        </p>
+                        <button class="ui-btn py-2 my-2 mx-auto text-black fw-bold text-center w-75 mt-auto card-button-custom"
+                        onclick="window.open('https://www.figma.com/design/5qXVRwE8JbaLuniN3RpINC/WEBSITE-GYM?t=uT1Gknp2QChOq7OQ-1', '_blank');"> 
+                            Figma File <i class="fab fa-figma"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="ui card mx-3 px-2 py-3" style="width: 20rem;">
+                    <img src="6 Bayan-X.png" class="card-img-top fixed-height" alt="Bayan-X">
+                    <hr class="text-white">
+                    <div class="card-body d-flex flex-column"> 
+                        <h5 class="card-title text-white">Bayan-X</h5>
+                        <p class="ui-txt card-text text-justify card-text-fixed-height flex-grow-1 smaller text-white"> The UI of our proposed app in a hackathon. Me and 4
+                            other friends contributed in building the Ui, and it has also been fitted with an animation
+                            for user experience. Finally, the color scheme is in sync with the theme "Bayanihan" making
+                            it nice to look at.
+                        </p>
+                        <button class="ui-btn py-2 my-2 mx-auto text-black fw-bold text-center w-75 mt-auto card-button-custom"
+                        onclick="window.open('https://www.figma.com/design/8JgqMTELAtAmRvJCQ2VkWa/Bayan-X?node-id=0-1&t=uT1Gknp2QChOq7OQ-1', '_blank');"> 
+                            Figma File <i class="fab fa-figma"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!--UI Designs-->
-
-        <div id="ui-design">
-            <h1 class="big text-center">UI Designs</h1>
-            <div class="row w-75 mx-auto my-5">
-                <div class="col m-2 p-5 ui-card" style="background-color: #5E5D5D;">
-                    <h2 class="text-white text-center p-3">Envirofund UI</h2>
-                    <img src="4 Envirofund.png" class="img-fluid custom-img2">
-                    <p class="text-white text-justify p-3">
-                        A climate change donation mobile app UI design that I made in Human-Computer-Interaction class.
-                        It emphasizes a nature theme to make users inspired in taking action to help the environment.
-                        Additionally, it has an animation to showcase the seamless user-flow.
-                    </p>
-                    <div class="d-flex justify-content-center p-1">
-                        <button class="py-2 m-2 text-black fw-bold text-center w-50"
-                        onclick="window.open('https://www.figma.com/design/YSGqKYZRg77V0ZCYfq2X2w/EnviroFund-Mobile?node-id=0-1&t=lT5BxLVoAo00dew3-1', '_blank');">
-                            Figma File <i class="fab fa-figma"></i>
-                        </button>
-                    </div>
-                </div>
-               
-                <div class="col m-2 p-5 ui-card" style="background-color: #5E5D5D;">
-                    <h2 class="text-white text-center p-3">Gym Website UI</h2>
-                    <img src="5 Gym Website.png" class="img-fluid custom-img2">
-                    <p class="text-white text-justify p-3">A simple, but eye-catching gym website UI made with a friend.
-                        Moreover, the dark theme brings a sleek, modern vibe that feels energetic and intense—perfect for a fitness brand. 
-                        It helps highlight bright accents like buttons and images, making the content pop while reducing eye strain for users.
-                    </p>
-                    <div class="d-flex justify-content-center p-1">
-                        <button class="py-2 m-2 text-black fw-bold text-center w-50"
-                        onclick="window.open('https://www.figma.com/design/5qXVRwE8JbaLuniN3RpINC/WEBSITE-GYM?t=uT1Gknp2QChOq7OQ-1', '_blank');">
-                            Figma File <i class="fab fa-figma"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="row ui-card w-75 mx-auto my-5">
-                <div class="col m-2 p-5 ui-card" style="background-color: #5E5D5D;">
-                    <h2 class="text-white text-center p-3">Bayan-X UI</h2>
-                    <img src="6 Bayan-X.png" class="img-fluid custom-img2">
-                    <p class="text-white text-justify p-3">The UI of our proposed app in a hackathon. Me and 4
-                        other friends contributed in building the Ui, and it has also been fitted with an animation
-                        for user experience. Finally, the color scheme is in sync with the theme "Bayanihan" making
-                        it nice to look at.
-                    </p>
-                    <div class="d-flex justify-content-center p-1">
-                        <button class="py-2 m-2 text-black fw-bold text-center w-50"
-                        onclick="window.open('https://www.figma.com/design/8JgqMTELAtAmRvJCQ2VkWa/Bayan-X?node-id=0-1&t=uT1Gknp2QChOq7OQ-1', '_blank');">
-                            Figma File <i class="fab fa-figma"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="col m-2 p-5 ui-card" style="background-color: #5E5D5D;">
-                    <h2 class="text-white text-center p-3">Website Portfolio UI</h2>
-                    <img src="7 Portfolio.png" class="img-fluid custom-img2">
-                    <p class="text-white text-justify p-3">The UI design for my website portfolio. It exhibits 
-                        a simple and clean look, with the goal to make it easy for visitors to navigate. Moreover,
-                        the consistent color scheme I applied makes it more smooth and visually appealing.
-                    </p>
-                    <div class="d-flex justify-content-center p-1">
-                        <button class="py-2 m-2 text-black fw-bold text-center w-50"
-                        onclick="window.open('https://www.figma.com/design/Fs4uOKtLYNaT6fkHMvghDd/Website-Portfolio?node-id=0-1&t=uT1Gknp2QChOq7OQ-1', '_blank');">
-                            Figma File <i class="fab fa-figma"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Skills -->
 
         <div id="skills" class="p-5" style="background-color: black;">
             <h1 class="big text-center p-3">Skills</h1>
-            <div class="container py-4">
+            
 
             <!-- Skill Card 1-->
 
-            <div class="row w-75 mx-auto rounded shadow p-4 mb-5" style="background-color: #5E5D5D;">
-                <div class="col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
+            <div class="skill row w-75 mx-auto rounded shadow p-4 mb-5" style="background-color: #5E5D5D;">
+                <div class="skill-font col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
                     <i class="fas fa-code me-2"></i>Languages
                 </div>
                 <div class="col-12 col-md-9">
@@ -267,8 +308,8 @@
 
             <!-- Skill Card 2-->
 
-            <div class="row w-75 mx-auto rounded shadow p-4 my-5" style="background-color: #5E5D5D;">
-                <div class="col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
+            <div class="skill row w-75 mx-auto rounded shadow p-4 my-5" style="background-color: #5E5D5D;">
+                <div class="skill-font col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
                     <i class="fas fa-wrench me-2"></i>Tools & Frameworks
                 </div>
                 <div class="col-12 col-md-9">
@@ -288,8 +329,8 @@
 
             <!-- Skill Card 3-->
 
-            <div class="row w-75 mx-auto rounded shadow p-4 my-5" style="background-color: #5E5D5D;">
-                <div class="col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
+            <div class="skill row w-75 mx-auto rounded shadow p-4 my-5" style="background-color: #5E5D5D;">
+                <div class="skill-font col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
                     <i class="fas fa-boxes-stacked me-2"></i>Others
                 </div>
                 <div class="col-12 col-md-9">
@@ -306,17 +347,18 @@
                     </ul>
                 </div>
             </div>
-            </div>
+            
         </div>
 
         <!-- Extras -->
 
         <div id="extras" class="my-5">
-            <h1 class="big text-center p-3">Extras</h1>
+            <h1 class="big text-center pt-3">Extras</h1>
             <!-- Education Card -->
             <div class="card w-75 mx-auto my-5" style="background-color: #5E5D5D;">
-                <div class="card-header">
-                    <h2 class="card-title text-white fw-bold">Education: University of Santo Tomas</h2>
+                <div class="card-header d-flex align-items-center">
+                    <i class="fas fa-graduation-cap text-white me-2"></i>
+                    <h3 class="card-title text-white mb-0">Education</h3>
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
@@ -339,9 +381,10 @@
                 </div>
             </div>
             <!-- Certifications Card -->
-            <div class="card w-75 mx-auto my-5" style="background-color: #5E5D5D;">
-                <div class="card-header">
-                    <h2 class="card-title text-white fw-bold">Certifications</h2>
+            <div class="card w-75 mx-auto my-5 pt-2" style="background-color: #5E5D5D;">
+                <div class="card-header d-flex align-items-center">
+                    <i class="fas fa-scroll text-white me-2"></i>
+                    <h3 class="card-title text-white mb-0">Certifications</h3>
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
@@ -359,9 +402,10 @@
             </div>
 
             <!-- Hackathons -->
-            <div class="card w-75 mx-auto my-5" style="background-color: #5E5D5D;">
-                <div class="card-header">
-                    <h2 class="card-title text-white fw-bold">Hackathons</h2>
+            <div class="card w-75 mx-auto my-5 pt-2" style="background-color: #5E5D5D;">
+                <div class="card-header d-flex align-items-center">
+                    <i class="fas fa-bolt text-white me-2"></i>
+                    <h3 class="card-title text-white mb-0">Hackathons</h3>
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">

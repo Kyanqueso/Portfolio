@@ -28,11 +28,25 @@
   #menu-bar a:hover {
     transform: none;
   }
+  #home{
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+  }
+  #about{
+    width: 100% !important;
+  }
 }
 /* Text design in #home */
 .big {
-    font-size: 4rem;
-    color: #C59137; 
+    font-size: 3rem;
+    color: #C59137;
+    font-family: 'Poppins'; 
+    font-weight: bolder;
+}
+
+.card-title{
+  font-weight: bolder;
+  letter-spacing: 0.05em;
 }
 
 .text-justify{text-align: justify;}
@@ -43,6 +57,15 @@ section h4 {font-size: 2rem;}
     font-weight: bold;
 }
 
+@media (max-width: 768px) {
+    .big {
+        font-size: 2.5rem; 
+    }
+
+    section h4, #ds {
+        font-size: 1.4rem; 
+    }
+}
 /* Button Design in #home*/
 .essential, button{
     background-color: #546EA6;
@@ -55,60 +78,142 @@ section h4 {font-size: 2rem;}
 }
 
 /* Projects Section Design */
-
 #projects{
   background-color: black;
 }
 .proj-card {
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 2.5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-.custom-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 3px solid white;
-  border-radius: 5%;
+.project-card-clickable:hover{
+  cursor: pointer;
 }
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-  .proj-card {
-    flex-direction: column;
-    width: 90%;
-    padding: 2rem 1rem;
-  }
-
-  .proj-card .col {
+.proj-img {
+    aspect-ratio: 16 / 9;        
+    object-fit: contain;         
     width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .custom-img {
-    max-height: 250px;
-  }
+    height: 100%;
+    display: block;
+    border-radius: 10px !important;
+}
+/* Responsive behavior for screens */
+@media (max-width: 1024px) {
+    .proj-card {
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        font-size: 1rem;
+    }
+    .proj-card .col {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .proj-img{
+      margin-bottom: 3%;
+    }
+    .card-btn{
+      width: 40% !important;
+    }
+}
+@media (max-width: 768px) {
+    .proj-card{
+      font-size: 0.8rem;
+    }
+    .proj-img{
+      margin-bottom: 3%;
+    }
+    .proj-card .my-2 {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+}
+@media (max-width: 690px) {
+  .card-btn{
+      width: 70% !important;
+    }
+}
+@media (max-width: 450px) {
+    #projects .card{
+      width: 100% !important;
+    }
+    .card-btn{
+      width: 70% !important;
+    }
 }
 
 /* UI Designs Section Design */
 .ui-card{
   border-radius: 3%;
 }
-/* To help landscape */
-.custom-img2-container {
-    width: 100%;
-    aspect-ratio: 16/9; 
-    overflow: hidden;
-    border-radius: 10px; 
+.fixed-height {
+  height: 250px; 
+  object-fit: contain;
 }
-.custom-img2 {
-    width: 100%;
-    height: 300px; 
+
+.card-text-fixed-height {
+    min-height: 120px; 
+}
+
+.fa-bolt, .fa-scroll, .fa-graduation-cap{
+    font-size: 1.3rem !important;
+}
+
+.ui{
+  background-color: black;
+}
+
+.smaller{
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .d-flex.flex-row.justify-content-center {
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  }
+
+  .ui.card {
+    width: 85% !important; /* Sets card width to 90% of the parent container */
+    margin-bottom: 1rem; /* Adds some space between wrapped cards */
+  }
+  #uicard2{
+    margin-bottom: 15%;
+    margin-top: 10%;
+  }
+  .fixed-height {
+    height: 225px; 
     object-fit: contain;
-    background-color: #1c1c1c; 
-    border-radius: 10px; 
+  }
+  .ui-txt{
+    padding-bottom: 3% !important;
+  }
 }
-#li_link:hover{
-  color:#3D5A99 !important;
+
+/* Other texts */
+@media (max-width:768px){
+  #skills, #extras, #contact{
+    font-size: 0.7rem;
+  }
+  .skill{
+    width: 100% !important;
+  }
+  .skill-font, .fa-bolt, .fa-scroll, .fa-graduation-cap{
+    font-size: 1rem !important;
+  }
+  .card-title{
+    font-size: 1.1rem;
+  }
+  #contact h1 {
+    font-size: 1.7rem;
+  }
+  #contact h4 {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width:350px){
+  #contact h4 {
+    font-size: 0.8rem;
+  }
 }
