@@ -47,7 +47,7 @@
             <section class="container my-5">
                 <div class="row justify-content-center g-3">
                     <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                        <a href="Kyan Charles So_Resume.pdf" target="_blank" rel="noopener noreferrer" 
+                        <a href="Kyan Charles So; Resume.pdf" target="_blank" rel="noopener noreferrer" 
                         class="essential py-3 px-4 text-black fw-bold text-center w-75 mx-auto d-block text-decoration-none">
                             Resume <i class="fas fa-download"></i>
                         </a>
@@ -72,8 +72,8 @@
         <div id="about" class="w-75 my-5 mx-auto p-5">
             <h1 class="big text-center mb-2">About Me</h1>
             <p class="text-justify text-white mb-2">
-                I am Kyan Charles So, 20 years old and in my 3rd year of BS in Computer Science 
-                at UST—a highly motivated student with a passion for lifelong learning. I have a 
+                I am Kyan Charles So, 20 years old and in my <span id="ds">3rd year of BS in Computer Science 
+                at UST</span>—a highly motivated student with a passion for lifelong learning. I have a 
                 strong programming and problem-solving skill set and am looking for ways to take 
                 it a step further. Moreover, my ability to adapt to any situation and relentless 
                 drive for excellence will prove valuable in any circumstance. And finally, I am 
@@ -87,8 +87,55 @@
         <div id="projects" class="w-100 mx-auto my-5 p-5">
 
             <h1 class="big text-center">Projects</h1>
-
+            
             <!--Project Card 1-->
+            <div class="card my-5 w-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
+                <div class="row proj-card">
+                    <div class="one col my-2 ms-3">
+                        <div class="card-body">
+                            <h4 class="card-title text-white">Clarity ESG</h4>
+                            <p class="card-text text-white text-justify" id="project-description-1">
+                                This project is an interactive Streamlit application designed to evaluate SMEs in 
+                                the Philippines and generate reliable ESG scores. It streamlines the process with 
+                                OCR-powered document processing, automated scoring, supplier mapping with risk 
+                                checks, and explainable AI insights. The app also supports instant report 
+                                generation, helping businesses and lenders save time while making informed, 
+                                sustainable decisions.
+                            </p>
+                            <div id="tech-stack-1" class="text-white" style="display: none;">
+                                <p class="fw-bold">Tech Stack Used:</p>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Python, HTML, CSS, Bootstrap
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Streamlit, BeautifulSoup4
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Pandas, Numpy 
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Seaborn, Matplotlib
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        OpenAI, Pymupdf, Reportlab
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="card-btn py-2 my-2 mx-auto text-black fw-bold text-center w-75"
+                                    onclick="event.stopPropagation(); window.open('https://github.com/Kyanqueso/ClarityESG', '_blank');">
+                                Source Code <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col my-2 me-3">
+                        <img src="7 ClarityESG.png" class="proj-img" loading="lazy"
+                        alt="card-horizontal-image" style="min-height: 250px;">
+                    </div>
+                </div>
+            </div>
+
+            <!--Project Card 2-->
             <div class="card my-5 w-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
                 <div class="row proj-card">
                     <div class="one col my-2 ms-3">
@@ -133,7 +180,7 @@
                 </div>
             </div>
 
-            <!--Project Card 2-->
+            <!--Project Card 3-->
             <div class="card my-5 w-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
                 <div class="row proj-card">
                     <div class="one col my-2 ms-3">
@@ -172,7 +219,7 @@
                 </div>
             </div>
 
-        <!--Project Card 3-->
+        <!--Project Card 4-->
         <div class="card my-5 w-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
             <div class="row proj-card">
                 <div class="one col my-2 ms-3">
@@ -318,6 +365,9 @@
                         <li class="list-group-item bg-dark text-white fw-bold">
                             Figma <i class="fab fa-figma float-end"></i>
                         </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Tableau <i class="fas fa-chart-bar float-end"></i>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -339,6 +389,9 @@
                         <li class="list-group-item bg-dark text-white fw-bold">
                             Object-Oriented Proramming (OOP) <i class="fas fa-cogs float-end"></i>
                         </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Prompt Engineering <i class="fas fa-brain float-end"></i>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -358,19 +411,19 @@
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white fw-bold">
-                             BS Computer Science (2023 - 2027)
+                            BS Computer Science (2023 - 2027)
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
                             Consistent Dean's Lister
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            CSS External Affairs Committee (Sep 2024 - May 2025)
+                            UST Computer Science Society; External Affairs Committee (Sep 2024 - May 2025)
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            Project Management Committee, ICS Student Council (Sep 2024 - May 2025)
+                            Project Management Committee; ICS Student Council (Sep 2024 - May 2025)
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            CSS Finance Committee (Sep 2023 - May 2024)
+                            UST Computer Science Society; Finance Committee (Sep 2023 - May 2024)
                         </li>
                     </ul>
                 </div>
@@ -406,6 +459,9 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white fw-bold">
                             Hackfest 2025 Horizon
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            BPI Datawave 2025
                         </li>
                     </ul>
                 </div>
