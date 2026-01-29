@@ -57,6 +57,12 @@ section h4 {font-size: 2rem;}
     font-weight: bold;
 }
 
+#my_picture{
+  border-radius: 8px !important;
+  width: 240px;
+  height: 240px;
+}
+
 @media (max-width: 768px) {
     .big {
         font-size: 2.5rem; 
@@ -75,6 +81,25 @@ section h4 {font-size: 2rem;}
 .essential:hover, button:hover{
   background-color: #3D5A99;
   transform:scale(1.1);
+}
+
+#about{
+  background-color: black;
+}
+
+/* Experience Section Design */
+.award-img {
+    max-height: 200px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 500px) {  /* Stack on small screens */
+    .award-img {
+        max-width: 100%;    
+    }
 }
 
 /* Projects Section Design */

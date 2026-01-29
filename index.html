@@ -9,28 +9,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="design.css">
     </head>
-    <script>
-        function toggleProjectInfo(clickedCard) {
-            // Find the specific project description and tech stack within the clicked card
-            var projectDescription = clickedCard.querySelector('[id^="project-description-"]');
-            var techStack = clickedCard.querySelector('[id^="tech-stack-"]');
-
-            if (projectDescription.style.display !== 'none') {
-                // If description is visible, hide it and show tech stack
-                projectDescription.style.display = 'none';
-                techStack.style.display = 'block';
-            } else {
-                // If tech stack is visible, hide it and show description
-                projectDescription.style.display = 'block';
-                techStack.style.display = 'none';
-            }
-        }
-    </script>
     <body style="background-color: #312C2C;">
         <!-- Home Section -->
         <nav id="menu-bar" class="w-75 mx-auto d-flex justify-content-between align-items-center 
             p-3 px-4 rounded-3 mt-5 fw-bold" style="background-color: #5E5D5D; color: white;">
             <a href="#home" class="text-white text-decoration-none ms-2">Home</a>
+            <a href="#experience" class="text-white text-decoration-none ms-2">Experience</a>
             <a href="#projects" class="text-white text-decoration-none">Projects</a>
             <a href="#ui-design" class="text-white text-decoration-none">UI Designs</a>
             <a href="#skills" class="text-white text-decoration-none">Skills</a>
@@ -38,12 +22,17 @@
             <a href="#contact" class="text-white text-decoration-none me-2">Contact</a>
         </nav>
         <div id="home" class="mb-5">
-            <section class="d-flex flex-column text-center my-5">
-                <h1 class="big">Hi! I'm Kyan!</h1>
-                <h4 class="text-white">3rd year BS Computer Science Student</h4>
-                <h4 class="text-white">University of Santo Tomas</h4>
-                <h4 class="text-white">Specializing in <span id="ds">Data Science</span></h4>
-            </section>
+            <div class="d-flex flex-row align-items-center justify-content-center">
+                <section class="d-flex flex-column text-center my-5">
+                    <h1 class="big">Hi! I'm Kyan!</h1>
+                    <h4 class="text-white">3rd year BS Computer Science Student</h4>
+                    <h4 class="text-white">University of Santo Tomas</h4>
+                    <h4 class="text-white">Specializing in <span id="ds">Data Science</span></h4>
+                </section>
+                <section>
+                    <img src="Kyan Charles So_Picture.jpg" id="my_picture" class="mx-5 mt-4" loading="lazy", alt="Formal Picture">
+                </section>
+            </div>
             <section class="container my-5">
                 <div class="row justify-content-center g-3">
                     <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
@@ -69,17 +58,90 @@
                 </div>
             </section>
         </div>
-        <div id="about" class="w-75 my-5 mx-auto p-5">
-            <h1 class="big text-center mb-2">About Me</h1>
-            <p class="text-justify text-white mb-2">
-                I am Kyan Charles So, 20 years old and in my <span id="ds">3rd year of BS in Computer Science 
-                at UST</span>—a highly motivated student with a passion for lifelong learning. I have a 
-                strong programming and problem-solving skill set and am looking for ways to take 
-                it a step further. Moreover, my ability to adapt to any situation and relentless 
-                drive for excellence will prove valuable in any circumstance. And finally, I am 
-                also eager to share my skills and talents to any company or organization seeking 
-                a dedicated and results-driven professional.
-            </p>
+        <div id="about">
+            <div class="w-75 mx-auto p-5">
+                <h1 class="big text-center mb-2">About Me</h1>
+                <p class="text-justify text-white mb-2">
+                    I am Kyan Charles So, 20 years old and in my <span id="ds">3rd year of BS in Computer Science 
+                    at UST</span>—a highly motivated student with a passion for lifelong learning. I have a 
+                    strong programming and problem-solving skill set and am looking for ways to take 
+                    it a step further. Moreover, my ability to adapt to any situation and relentless 
+                    drive for excellence will prove valuable in any circumstance. And finally, I am 
+                    also eager to share my skills and talents to any company or organization seeking 
+                    a dedicated and results-driven professional.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Experience Section -->
+        <div id="experience" class="my-5">
+            <h1 class="big text-center">Experience</h1>
+
+            <!-- Experience Card -->
+            <div class="w-75 mx-auto bg-black p-4 rounded shadow my-4">
+
+                <!-- Row 1 -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-1">
+                    <span class="text-white fw-bold fs-4">Elinnov Technologies Inc.</span>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mt-2 gap-1">
+                    <span class="text-white fs-5 fw-semibold">Software Engineer Intern</span>
+                    <span class="text-white fs-6">September 2025 – January 2026</span>
+                </div>
+
+            </div>
+
+            <!-- Accomplishments -->
+            <div class="w-75 mx-auto">
+                <ul class="list-group list-group-flush mb-3">
+                    
+                    <li class="list-group-item bg-dark text-white d-flex gap-3 py-3">
+                        <i class="fa-solid fa-diagram-project mt-1"></i>
+                        <span>
+                            Assigned to create a Job Application System for the company to simplify the process for both applicants and HR
+                        </span>
+                    </li>
+
+                    <li class="list-group-item bg-dark text-white d-flex gap-3 py-3">
+                        <i class="fas fa-award text-warning mt-1"></i>
+                        <span>
+                            Awarded as the Most Dedicated and Best Team Player award - Completed 400 hours
+                        </span>
+                    </li>
+
+                    <li class="list-group-item bg-dark text-white d-flex gap-3 py-3">
+                        <i class="fas fa-code mt-1"></i>
+                        <span>
+                            Developed and collaborated on creating a Full-Stack web application system with WordPress integration
+                        </span>
+                    </li>
+
+                    <li class="list-group-item bg-dark text-white d-flex gap-3 py-3">
+                        <i class="fas fa-vial mt-1"></i>
+                        <span>
+                            Created test cases and performed End-to-end testing on the web application system using Playwright
+                        </span>
+                    </li>
+
+                    <li class="list-group-item bg-dark text-white d-flex gap-3 py-3">
+                        <i class="fas fa-tools mt-1"></i>
+                        <span>
+                            GitHub, Microsoft Azure, SourceTree, React.JS, Tailwind CSS, C#, PostgreSQL, WordPress, Playwright, Docker
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Award Images -->
+
+        <div class="w-75 my-5 mx-auto d-flex flex-wrap flex-column flex-lg-row justify-content-between align-items-center">
+            <img class="award-img mb-3 mb-lg-0" src="elinnov_awards/COC - Kyan.png" alt="COC Award">
+            <img class="award-img mb-3 mb-lg-0" src="elinnov_awards/Team Player - Kyan.png" alt="Best Team Player">
+            <img class="award-img mb-3 mb-lg-0" src="elinnov_awards/Most Dedicated - Kyan.png" alt="Most Dedicated">
         </div>
 
         <!-- Projects Section -->
@@ -89,7 +151,49 @@
             <h1 class="big text-center">Projects</h1>
             
             <!--Project Card 1-->
-            <div class="card my-5 w-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
+            <div class="card my-5 w-100 w-md-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
+                <div class="row proj-card">
+                    <div class="one col my-2 ms-3">
+                        <div class="card-body">
+                            <h4 class="card-title text-white">ShopZada Data Warehouse</h4>
+                            <p class="card-text text-white text-justify" id="project-description-1">
+                                This project is a end-to-end data warehouse solution for ShopZada, a hypothetical e-commerce company.
+                                It involves data extraction from raw and unstructured data, cleaning and transformation using Python and SQL, 
+                                and loading into a structured data warehouse via Apache Airflow. The project includes data modeling, 
+                                ETL processes, and visualization using Power BI to provide insights into important business metrics.
+                            </p>
+                            <div id="tech-stack-1" class="text-white" style="display: none;">
+                                <p class="fw-bold">Tech Stack Used:</p>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Python, Pandas
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        PostgreSQL, PGAdmin
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Docker, Airflow 
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        PowerBI
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="card-btn py-2 my-2 mx-auto text-black fw-bold text-center w-75"
+                                    onclick="event.stopPropagation(); window.open('https://github.com/n4t5Uuu/dwh_finalproject_3CSC_group_Lakers-Showtime', '_blank');">
+                                Source Code <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col my-2 me-3">
+                        <img src="3 Shopzada.png" class="proj-img" loading="lazy"
+                        alt="card-horizontal-image" style="min-height: 200px;">
+                    </div>
+                </div>
+            </div>
+
+            <!--Project Card 2-->
+            <div class="card my-5 w-100 w-md-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
                 <div class="row proj-card">
                     <div class="one col my-2 ms-3">
                         <div class="card-body">
@@ -135,53 +239,8 @@
                 </div>
             </div>
 
-            <!--Project Card 2-->
-            <div class="card my-5 w-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
-                <div class="row proj-card">
-                    <div class="one col my-2 ms-3">
-                        <div class="card-body">
-                            <h4 class="card-title text-white">Simple Expense Tracker</h4>
-                            <p class="card-text text-white text-justify" id="project-description-1">
-                                This project is an interactive Streamlit application that allows users to upload
-                                personal expense data in CSV format, analyze trends, detect anomalies, and forecast future spending
-                                using machine learning models. Moreover, the Streamlit link can be found in the readme file in the github
-                                repository.
-                            </p>
-                            <div id="tech-stack-1" class="text-white" style="display: none;">
-                                <p class="fw-bold">Tech Stack Used:</p>
-                                <ul class="list-group list-group-flush mb-3">
-                                    <li class="list-group-item bg-dark text-white fw-bold">
-                                        Python
-                                    </li>
-                                    <li class="list-group-item bg-dark text-white fw-bold">
-                                        Streamlit
-                                    </li>
-                                    <li class="list-group-item bg-dark text-white fw-bold">
-                                        Pandas, Numpy 
-                                    </li>
-                                    <li class="list-group-item bg-dark text-white fw-bold">
-                                        Seaborn, Matplotlib
-                                    </li>
-                                    <li class="list-group-item bg-dark text-white fw-bold">
-                                        Scikit-learn, XGBoost
-                                    </li>
-                                </ul>
-                            </div>
-                            <button class="card-btn py-2 my-2 mx-auto text-black fw-bold text-center w-75"
-                                    onclick="event.stopPropagation(); window.open('https://github.com/Kyanqueso/Expense-Tracker', '_blank');">
-                                Source Code <i class="fab fa-github"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col my-2 me-3">
-                        <img src="3 Expense Tracker.png" class="proj-img" loading="lazy"
-                        alt="card-horizontal-image" style="min-height: 200px;">
-                    </div>
-                </div>
-            </div>
-
             <!--Project Card 3-->
-            <div class="card my-5 w-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
+            <div class="card my-5 w-100 w-md-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
                 <div class="row proj-card">
                     <div class="one col my-2 ms-3">
                         <div class="card-body">
@@ -220,7 +279,7 @@
             </div>
 
         <!--Project Card 4-->
-        <div class="card my-5 w-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
+        <div class="card my-5 w-100 w-md-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
             <div class="row proj-card">
                 <div class="one col my-2 ms-3">
                     <div class="card-body">
@@ -321,7 +380,7 @@
             <h1 class="big text-center p-3">Skills</h1>
             
 
-            <!-- Skill Card 1-->
+            <!-- Skill Card 1 -->
 
             <div class="skill row w-75 mx-auto rounded shadow p-4 mb-5" style="background-color: #5E5D5D;">
                 <div class="skill-font col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
@@ -330,7 +389,19 @@
                 <div class="col-12 col-md-9">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white fw-bold">
+                            C# <i class="fab fa-microsoft float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            CSS <i class="fab fa-css3-alt float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            HTML <i class="fab fa-html5 float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
                             Java <i class="fab fa-java float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            JavaScript <i class="fab fa-js-square float-end"></i>
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
                             Python <i class="fab fa-python float-end"></i>
@@ -338,17 +409,11 @@
                         <li class="list-group-item bg-dark text-white fw-bold">
                             SQL <i class="fas fa-database float-end"></i>
                         </li>
-                        <li class="list-group-item bg-dark text-white fw-bold">
-                            HTML <i class="fab fa-html5 float-end"></i>
-                        </li>
-                        <li class="list-group-item bg-dark text-white fw-bold">
-                            CSS <i class="fab fa-css3-alt float-end"></i>
-                        </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Skill Card 2-->
+            <!-- Skill Card 2 -->
 
             <div class="skill row w-75 mx-auto rounded shadow p-4 my-5" style="background-color: #5E5D5D;">
                 <div class="skill-font col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
@@ -360,19 +425,43 @@
                             Bootstrap <i class="fab fa-bootstrap float-end"></i>
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
+                            Docker <i class="fab fa-docker float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Firebase <i class="fas fa-fire float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
                             GitHub <i class="fab fa-github float-end"></i>
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            Figma <i class="fab fa-figma float-end"></i>
+                            Pandas and Numpy <i class="fas fa-table float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Power BI <i class="fas fa-chart-pie float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            React.js <i class="fab fa-react float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Scikit-learn <i class="fas fa-brain float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            SourceTree <i class="fab fa-sourcetree float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Tailwind CSS <i class="fas fa-wind float-end"></i>
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
                             Tableau <i class="fas fa-chart-bar float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            WordPress <i class="fab fa-wordpress float-end"></i>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Skill Card 3-->
+            <!-- Skill Card 3 -->
 
             <div class="skill row w-75 mx-auto rounded shadow p-4 my-5" style="background-color: #5E5D5D;">
                 <div class="skill-font col-12 col-md-3 text-white fw-bold mb-3 mb-md-0">
@@ -381,18 +470,40 @@
                 <div class="col-12 col-md-9">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            Responsive Web Design <i class="fas fa-laptop me-1 float-end"></i>
+                            APIs <i class="fas fa-plug float-end"></i>
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            Database Design <i class="fas fa-project-diagram float-end"></i>
+                            Data Analysis <i class="fas fa-search float-end"></i>
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            Object-Oriented Proramming (OOP) <i class="fas fa-cogs float-end"></i>
+                            Data Visualization <i class="fas fa-chart-area float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Effective and Proactive Communication <i class="fas fa-comments float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Full Stack Development <i class="fas fa-layer-group float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Machine Learning <i class="fas fa-robot float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Microsoft 365 <i class="fas fa-file-alt float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Project Management & Documentation <i class="fas fa-tasks float-end"></i>
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
                             Prompt Engineering <i class="fas fa-brain float-end"></i>
                         </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Quality Assurance (Playwright) <i class="fas fa-check-circle float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            UI / UX Design <i class="fas fa-pencil-ruler float-end"></i>
+                        </li>
                     </ul>
+
                 </div>
             </div>
             
@@ -403,31 +514,75 @@
         <div id="extras" class="my-5">
             <h1 class="big text-center pt-3">Extras</h1>
             <!-- Education Card -->
-            <div class="card w-75 mx-auto my-5" style="background-color: #5E5D5D;">
+            <div class="card w-75 mx-auto my-5 shadow" style="background-color: #5E5D5D;">
                 <div class="card-header d-flex align-items-center">
                     <i class="fas fa-graduation-cap text-white me-2"></i>
                     <h3 class="card-title text-white mb-0">Education</h3>
                 </div>
-                <div class="card-body">
+
+                <div class="card-body text-white">
+
+                    <!-- Degree -->
+                    <div class="mb-4 bg-dark p-4">
+                        <h5 class="fw-bold mb-1">
+                            BS Computer Science
+                        </h5>
+                        <span class="text-white fw-normal">2023 – 2027</span>
+                        <p class="mt-2 mb-0">
+                            Consistent Dean's Lister
+                        </p>
+                    </div>
+
+                    <hr class="text-black border-2">
+
+                    <!-- Organizations -->
+                    <h6 class="fw-bold mb-3">Leadership & Organizations</h6>
+
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            BS Computer Science (2023 - 2027)
+                            <i class="fas fa-users me-2"></i>
+                            <strong>UST Computer Science Society</strong><br>
+                            <span class="text-white fw-normal">
+                                Executive Associate (Sep 2025 – May 2026)
+                            </span>
                         </li>
+
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            Consistent Dean's Lister
+                            <i class="fas fa-cloud me-2"></i>
+                            <strong>UST AWS Learning Club</strong><br>
+                            <span class="text-white fw-normal">
+                                Finance Committee (Sep 2025 – May 2026)
+                            </span>
                         </li>
+
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            UST Computer Science Society; External Affairs Committee (Sep 2024 - May 2025)
+                            <i class="fas fa-briefcase me-2"></i>
+                            <strong>UST Computer Science Society</strong><br>
+                            <span class="text-white fw-normal">
+                                External Affairs Committee (Sep 2024 – May 2025)
+                            </span>
                         </li>
+
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            Project Management Committee; ICS Student Council (Sep 2024 - May 2025)
+                            <i class="fas fa-tasks me-2"></i>
+                            <strong>UST ICS Student Council</strong><br>
+                            <span class="text-white fw-normal">
+                                Project Management Committee (Sep 2024 – May 2025)
+                            </span>
                         </li>
+
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            UST Computer Science Society; Finance Committee (Sep 2023 - May 2024)
+                            <i class="fas fa-wallet me-2"></i>
+                            <strong>UST Computer Science Society</strong><br>
+                            <span class="text-white fw-normal"">
+                                Finance Committee (Sep 2023 – May 2024)
+                            </span>
                         </li>
                     </ul>
+
                 </div>
             </div>
+
             <!-- Certifications Card -->
             <div class="card w-75 mx-auto my-5 pt-2" style="background-color: #5E5D5D;">
                 <div class="card-header d-flex align-items-center">
@@ -458,10 +613,16 @@
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white fw-bold">
-                            Hackfest 2025 Horizon
+                            Hackfest Horizon 2025
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
                             BPI Datawave 2025
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            G-Cash ImaGnation 2025
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Globe 5G Hackathon 2025
                         </li>
                     </ul>
                 </div>
@@ -482,4 +643,21 @@
             </h4>
         </div>
     </body>
+    <script>
+        function toggleProjectInfo(clickedCard) {
+            // Find the specific project description and tech stack within the clicked card
+            var projectDescription = clickedCard.querySelector('[id^="project-description-"]');
+            var techStack = clickedCard.querySelector('[id^="tech-stack-"]');
+
+            if (projectDescription.style.display !== 'none') {
+                // If description is visible, hide it and show tech stack
+                projectDescription.style.display = 'none';
+                techStack.style.display = 'block';
+            } else {
+                // If tech stack is visible, hide it and show description
+                projectDescription.style.display = 'block';
+                techStack.style.display = 'none';
+            }
+        }
+    </script>
 </html>
