@@ -96,7 +96,13 @@ section h4 {font-size: 2rem;}
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-@media (max-width: 500px) {  /* Stack on small screens */
+@media (min-width: 992px) {
+    .award-img {
+        min-width: 200px; /* Ensures minimum width so they don't squeeze too much */
+    }
+}
+
+@media (max-width: 991px) {
     .award-img {
         max-width: 100%;    
     }
