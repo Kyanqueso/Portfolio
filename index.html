@@ -149,6 +149,47 @@
                 <div class="row proj-card">
                     <div class="one col my-2 ms-3">
                         <div class="card-body">
+                            <h4 class="card-title text-white">HelpMeDesign (Ongoing Prototype)</h4>
+                            <p class="card-text text-white text-justify" id="project-description-1">
+                                HelpMeDesign is an AI-powered project management tool built for freelance UX/UI designers, and as an aspiring one myself, 
+                                a project close to home. Still a work in progress, it brings together client tracking, project management, financials, 
+                                and AI-assisted proposals, user flows, and design feedback in one place.
+                            </p>
+                            <div id="tech-stack-1" class="text-white" style="display: none;">
+                                <p class="fw-bold">Tech Stack Used:</p>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        React, Vite, Tailwind CSS, shadcn/ui
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        FastAPI, SQLAlchemy, SQLite
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        Docker 
+                                    </li>
+                                    <li class="list-group-item bg-dark text-white fw-bold">
+                                        AWS Bedrock, AWS S3, EC2, RAG via ChromaDB + SentenceTransformers
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="card-btn py-2 my-2 mx-auto text-black fw-bold text-center w-75"
+                                    onclick="event.stopPropagation(); window.open('https://github.com/Kyanqueso/HelpMeDesign', '_blank');">
+                                Source Code <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col my-2 me-3">
+                        <img src="1_HelpMeDesign.png" class="proj-img" loading="lazy"
+                        alt="card-horizontal-image" style="min-height: 200px;">
+                    </div>
+                </div>
+            </div>
+            
+            <!--Project Card 2-->
+            <div class="card my-5 w-100 w-md-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
+                <div class="row proj-card">
+                    <div class="one col my-2 ms-3">
+                        <div class="card-body">
                             <h4 class="card-title text-white">ShopZada Data Warehouse</h4>
                             <p class="card-text text-white text-justify" id="project-description-1">
                                 This project is a end-to-end data warehouse solution for ShopZada, a hypothetical e-commerce company.
@@ -186,7 +227,7 @@
                 </div>
             </div>
 
-            <!--Project Card 2-->
+            <!--Project Card 3-->
             <div class="card my-5 w-100 w-md-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
                 <div class="row proj-card">
                     <div class="one col my-2 ms-3">
@@ -233,44 +274,6 @@
                 </div>
             </div>
 
-            <!--Project Card 3-->
-            <div class="card my-5 w-100 w-md-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
-                <div class="row proj-card">
-                    <div class="one col my-2 ms-3">
-                        <div class="card-body">
-                            <h4 class="card-title text-white">Toy Tracker</h4>
-                            <p class="card-text text-white text-justify" id="project-description-2">The Toy Tracker App (a personal project) is an offline toy tracking application 
-                            that helps users manage their toy collection with ease. It features a clean, user-friendly interface for adding, 
-                            viewing, and updating toy details, including images, costs, suppliers, and payment status. With built-in 
-                            search, filtering, and detailed overlays, Toy-nado makes organizing and visualizing toy data simple and 
-                            efficient.
-                            </p>
-                            <div id="tech-stack-2" class="text-white" style="display: none;">
-                                <p class="fw-bold">Tech Stack Used:</p>
-                                <ul class="list-group list-group-flush mb-3">
-                                    <li class="list-group-item bg-dark text-white fw-bold">
-                                        Java (JavaFX)
-                                    </li>
-                                    <li class="list-group-item bg-dark text-white fw-bold">
-                                        CSS
-                                    </li>
-                                    <li class="list-group-item bg-dark text-white fw-bold">
-                                        SQLite
-                                    </li>
-                                </ul>
-                            </div>
-                            <button class="card-btn py-2 my-2 mx-auto text-black fw-bold text-center w-75"
-                                    onclick="event.stopPropagation(); window.open('https://github.com/Kyanqueso/ToyTracker', '_blank');">
-                                Source Code <i class="fab fa-github"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col my-2 me-3">
-                        <img src="1 Toynado.png" class="proj-img" loading="lazy"
-                        alt="card-horizontal-image" style="min-height: 200px;">
-                    </div>
-                </div>
-            </div>
 
         <!--Project Card 4-->
         <div class="card my-5 w-100 w-md-75 mx-auto project-card-clickable" style="background-color: #312C2C;" onclick="toggleProjectInfo(this);">
@@ -467,6 +470,9 @@
                             APIs <i class="fas fa-plug float-end"></i>
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
+                            AWS <i class="fab fa-aws float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
                             Data Analysis <i class="fas fa-search float-end"></i>
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
@@ -492,6 +498,9 @@
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
                             Quality Assurance (Playwright) <i class="fas fa-check-circle float-end"></i>
+                        </li>
+                        <li class="list-group-item bg-dark text-white fw-bold">
+                            Supabase <i class="fas fa-cloud float-end"></i>
                         </li>
                         <li class="list-group-item bg-dark text-white fw-bold">
                             UI / UX Design <i class="fas fa-pencil-ruler float-end"></i>
