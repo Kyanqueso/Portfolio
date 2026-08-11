@@ -22,6 +22,10 @@ import shopzadaDag2 from '../assets/Shopzada/Dag2.png'
 import hmmAiPage from '../assets/HelpMeManage/AI_Page.png'
 import hmmDashboard from '../assets/HelpMeManage/Dashboard.png'
 
+import electionErd from '../assets/ElectionSystem/ERD.png'
+import electionUserFlow from '../assets/ElectionSystem/UserFlow.png'
+import electionScreenshot from '../assets/ElectionSystem/Election System.png'
+
 const projects = [
   {
     slug: 'theresa-shoes',
@@ -199,6 +203,57 @@ const projects = [
         description:
           "It's very much a living prototype, infrastructure included. I'm about to start using it on my own freelance work, and I'll keep shipping improvements, and eventually revisit the hosting setup, as I figure out what a freelancer, starting with me, actually needs.",
         images: [],
+      },
+    ],
+  },
+  {
+    slug: 'election-system',
+    category: 'Election Management System',
+    title: 'Election System',
+    description:
+      'A role-based online voting platform built with two teammates for our final project - an admin manages users and the audit trail, an organizer runs elections and manages candidates, and voters register, cast a single vote, and view live results.',
+    tags: ['Java', 'HTML', 'CSS', 'JavaScript', 'MySQL', 'reCAPTCHA'],
+    image: electionScreenshot,
+    demoHref: null,
+    githubHref: 'https://github.com/Kyanqueso/ElectionSystem',
+    steps: [
+      {
+        icon: '💡',
+        title: 'A Team Final Project',
+        description:
+          "Assigned as our final project for a software engineering course, my two teammates and I set out to build a secure, role-based online voting system: an admin to manage users and audit logs, an organizer to run elections, and voters to register and cast a ballot.",
+        images: [],
+      },
+      {
+        icon: '🧭',
+        title: 'Mapping It Out',
+        description:
+          'Before writing any code, we modeled the data with an ERD and mapped the full login-to-vote flow across all three roles, so the whole team was building against the same plan.',
+        images: [
+          { src: electionUserFlow, caption: 'User Flow Diagram' },
+          { src: electionErd, caption: 'Entity Relationship Diagram' },
+        ],
+      },
+      {
+        icon: '⏩',
+        title: 'Skipping the Mockups',
+        description:
+          "We skipped Figma this time around. Between the three of us we already had a clear, shared picture of what the screens needed to look like, so we went straight from the user flow into building.",
+        images: [],
+      },
+      {
+        icon: '🔧',
+        title: 'Building It',
+        description:
+          "We built the frontend in plain HTML, CSS, and JavaScript on top of a Java backend, with MySQL for storage. Passwords were hashed and sensitive data encrypted with Java's Cipher library, and reCAPTCHA guarded the login and registration forms against bots.",
+        images: [],
+      },
+      {
+        icon: '🎓',
+        title: 'Looking Back',
+        description:
+          "We shipped a fully functional system and walked away with a strong grade on it. Also, it was one of my first real full-stack projects, and it taught me more about databases, authentication, and working as a team than any lecture had. The tech stack shows its age but it really shows how far my skills have come since.",
+        images: [{ src: electionScreenshot, caption: 'Organizer — Voter Management' }],
       },
     ],
   },
