@@ -26,6 +26,8 @@ import mtcPrototype1 from '../assets/MagicTouchConsole/Prototype 1.png'
 import mtcPrototype2 from '../assets/MagicTouchConsole/Prototype 2.png'
 import mtcJobOrderSummary from '../assets/MagicTouchConsole/Job order summary.png'
 import mtcAddingPOs from '../assets/MagicTouchConsole/Adding POs.png'
+import mtcUserFlow from '../assets/MagicTouchConsole/user_flow.png'
+import mtcDbDiagram from '../assets/MagicTouchConsole/mtc dbdiagram.png'
 
 // import hmmAiPage from '../assets/HelpMeManage/AI_Page.png'
 // import hmmDashboard from '../assets/HelpMeManage/Dashboard.png'
@@ -41,7 +43,7 @@ const projects = [
     title: 'Theresa Shoes',
     description:
       'A full CRUD web application that automates product listings, order and payment tracking, and business analytics, cutting out the manual work that used to eat up business owners\' time.',
-    tags: ['React', 'Python', 'Supabase', 'AWS Lambda'],
+    tags: ['React', 'Python', 'AWS Lambda', 'Supabase'],
     image: theresaAnalytics,
     demoHref: 'https://web-kappa-two-18.vercel.app/',
     githubHref: 'https://github.com/Kyanqueso/theresa_shoes_app',
@@ -122,7 +124,7 @@ const projects = [
       'A custom web-based ERP built solo for a printing press company, bringing disconnected processes into one unified system and replacing spreadsheets with a structured way to manage daily operations.',
     tags: ['React', 'Quarkus', 'AWS Lambda', 'Supabase'],
     image: mtchome,
-    demoHref: '',
+    demoHref: 'https://mtcdemo.charlesque404.workers.dev/login',
     githubHref: 'https://github.com/Kyanqueso/magic_touch_console',
     steps: [
       {
@@ -130,7 +132,10 @@ const projects = [
         title: 'Making Sense of the Files',
         description:
           "Worked through the business requirements with the client to figure out how their customers, suppliers, purchase orders, invoices, vouchers, and job orders should all come together into a single system.",
-        images: [],
+        images: [
+          { src: mtcUserFlow, caption: 'User Flow Diagram' },
+          { src: mtcDbDiagram, caption: 'Entity Relationship Diagram' },
+        ],
       },
       {
         icon: '✏️',
