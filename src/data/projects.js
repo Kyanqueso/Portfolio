@@ -149,6 +149,7 @@ const projects = [
           { src: mtcPrototype2, caption: 'Prototype — Business Registration' },
         ],
         imageGridClass: 'grid-cols-2 sm:grid-cols-4',
+        figmaHref: 'https://www.figma.com/design/gYwW6L8g3fgMzq1grutC6U/Magic-Touch-Console?node-id=0-1&p=f&t=WUaXfcImlFasB7nK-0',
       },
       {
         icon: '🔧',
