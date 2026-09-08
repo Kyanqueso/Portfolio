@@ -19,12 +19,20 @@ import shopzadaRawData2 from '../assets/Shopzada/sample raw data 2.png'
 import shopzadaDag1 from '../assets/Shopzada/Dag1.png'
 import shopzadaDag2 from '../assets/Shopzada/Dag2.png'
 
-import hmmAiPage from '../assets/HelpMeManage/AI_Page.png'
-import hmmDashboard from '../assets/HelpMeManage/Dashboard.png'
+import mtchome from '../assets/MagicTouchConsole/homepage.png'
+import mtcWireframe1 from '../assets/MagicTouchConsole/Wireframe 1.png'
+import mtcWireframe2 from '../assets/MagicTouchConsole/Wireframe 2.png'
+import mtcPrototype1 from '../assets/MagicTouchConsole/Prototype 1.png'
+import mtcPrototype2 from '../assets/MagicTouchConsole/Prototype 2.png'
+import mtcJobOrderSummary from '../assets/MagicTouchConsole/Job order summary.png'
+import mtcAddingPOs from '../assets/MagicTouchConsole/Adding POs.png'
 
-import electionErd from '../assets/ElectionSystem/ERD.png'
-import electionUserFlow from '../assets/ElectionSystem/UserFlow.png'
-import electionScreenshot from '../assets/ElectionSystem/Election System.png'
+// import hmmAiPage from '../assets/HelpMeManage/AI_Page.png'
+// import hmmDashboard from '../assets/HelpMeManage/Dashboard.png'
+
+// import electionErd from '../assets/ElectionSystem/ERD.png'
+// import electionUserFlow from '../assets/ElectionSystem/UserFlow.png'
+// import electionScreenshot from '../assets/ElectionSystem/Election System.png'
 
 const projects = [
   {
@@ -107,6 +115,76 @@ const projects = [
     ],
   },
   {
+    slug: 'magic-touch-console',
+    category: 'ERP System',
+    title: 'Magic Touch Console',
+    description:
+      'A custom web-based ERP built solo for a printing press company, bringing disconnected processes into one unified system and replacing spreadsheets with a structured way to manage daily operations.',
+    tags: ['React', 'Quarkus', 'AWS Lambda', 'Supabase'],
+    image: mtchome,
+    demoHref: '',
+    githubHref: 'https://github.com/Kyanqueso/magic_touch_console',
+    steps: [
+      {
+        icon: '💡',
+        title: 'Making Sense of the Files',
+        description:
+          "Worked through the business requirements with the client to figure out how their customers, suppliers, purchase orders, invoices, vouchers, and job orders should all come together into a single system.",
+        images: [],
+      },
+      {
+        icon: '✏️',
+        title: 'Sketching It Out',
+        description:
+          'Wireframed the console from customer and supplier records to PO, invoice, voucher, and job order tracking and checked in with the client for approval before turning those wireframes into a working prototype.',
+        images: [
+          { src: mtcWireframe1, caption: 'Wireframe — Corporate Profiles' },
+          { src: mtcWireframe2, caption: 'Wireframe — Job Order Summary' },
+          { src: mtcPrototype1, caption: 'Prototype — Corporate Profiles' },
+          { src: mtcPrototype2, caption: 'Prototype — Business Registration' },
+        ],
+        imageGridClass: 'grid-cols-2 sm:grid-cols-4',
+      },
+      {
+        icon: '🔧',
+        title: 'Building It Solo',
+        description:
+          'Took the prototype and built out the full console end to end on my own, module by module.',
+        images: [],
+      },
+      {
+        icon: '🔍',
+        title: 'A Second Pair of Eyes',
+        description:
+          'Brought in a friend to QA the system, someone outside my own head, to catch what I might have missed and keep the testing unbiased.',
+        images: [],
+      },
+      {
+        icon: '🔐',
+        title: 'Fine-Tuning Access',
+        description:
+          "I also built out proper access control for admin-managed users: instead of one blanket admin role, each user is scoped per module, view-only on some, full edit access on others, so someone handling job orders isn't also able to touch invoices or vouchers they have no business in.",
+        images: [],
+      },
+      {
+        icon: '🚀',
+        title: 'Shipping It',
+        description: 'Deployed it with a familiar stack: React, Python, AWS Lambda, and Supabase.',
+        images: [],
+      },
+      {
+        icon: '🎉',
+        title: 'The Verdict',
+        description:
+          'The client was impressed with the result. A system that brought much-needed structure to their day-to-day operations, with a solid foundation in place for the many workflows and improvements still to come.',
+        images: [
+          { src: mtcJobOrderSummary, caption: 'Job Order Summary' },
+          { src: mtcAddingPOs, caption: 'Adding a Purchase Order' },
+        ],
+      },
+    ],
+  },
+  {
     slug: 'shopzada-data-warehouse',
     category: 'Data Warehouse',
     title: 'Shopzada Data Warehouse',
@@ -165,6 +243,7 @@ const projects = [
       },
     ],
   },
+  /* Temporarily off the site.
   {
     slug: 'helpmemanage',
     category: 'Personal Management System',
@@ -257,65 +336,7 @@ const projects = [
       },
     ],
   },
-  {
-    slug: 'magic-touch-console',
-    hidden: true,
-    category: 'Accounting System',
-    title: 'Magic Touch Console',
-    description:
-      "A solo-built console that centralizes a client's customers and each customer's suppliers into one system, replacing scattered files with a faster, structured way to run day-to-day business.",
-    tags: ['React', 'Python', 'AWS Lambda', 'Supabase'],
-    image: null,
-    demoHref: '#',
-    githubHref: '#',
-    steps: [
-      {
-        icon: '💡',
-        title: 'Making Sense of the Files',
-        description:
-          "Worked through the business requirements and the raw files the client provided to figure out exactly what the system needed to handle.",
-        images: [],
-      },
-      {
-        icon: '✏️',
-        title: 'Sketching It Out',
-        description:
-          'Wireframed the console and checked in with the client for approval before turning those wireframes into a working prototype.',
-        images: [
-          { src: 'https://placehold.co/600x400', caption: 'Wireframe' },
-          { src: 'https://placehold.co/600x400', caption: 'Figma Prototype' },
-        ],
-      },
-      {
-        icon: '🔧',
-        title: 'Building It Solo',
-        description: 'Took the prototype and built out the full console end to end on my own.',
-        images: [],
-      },
-      {
-        icon: '🔍',
-        title: 'A Second Pair of Eyes',
-        description:
-          'Brought in a friend to QA the system, someone outside my own head, to catch what I might have missed and keep the testing unbiased.',
-        images: [],
-      },
-      {
-        icon: '🚀',
-        title: 'Shipping It',
-        description: 'Deployed it with a familiar stack: React, Python, AWS Lambda, and Supabase.',
-        images: [],
-      },
-      {
-        icon: '🎉',
-        title: 'The Verdict',
-        description: 'The client loved the result — a console that finally gave them a clear, structured way to manage their day-to-day finances.',
-        images: [
-          { src: 'https://placehold.co/600x400', caption: 'Accounting Dashboard' },
-          { src: 'https://placehold.co/600x400', caption: 'Reports View' },
-        ],
-      },
-    ],
-  },
+  */
 ]
 
 export default projects

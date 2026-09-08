@@ -36,17 +36,17 @@ function CaseStudy() {
         ))}
       </div>
 
-      <div className="mt-8 aspect-video w-full rounded-xl bg-slate-100 flex items-center justify-center">
-        {project.image ? (
-          <ZoomableImage
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover rounded-xl"
-          />
-        ) : (
+      {project.image ? (
+        <ZoomableImage
+          src={project.image}
+          alt={project.title}
+          className="mt-8 w-full h-auto rounded-xl"
+        />
+      ) : (
+        <div className="mt-8 aspect-video w-full rounded-xl bg-slate-100 flex items-center justify-center">
           <FaRegImage size={32} className="text-neutral-400" />
-        )}
-      </div>
+        </div>
+      )}
 
       <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         {project.githubHref && (
@@ -82,6 +82,7 @@ function CaseStudy() {
             imageJoiner={step.imageJoiner}
             figmaHref={step.figmaHref}
             imageNote={step.imageNote}
+            imageGridClass={step.imageGridClass}
             showConnector={index !== 0}
           />
         ))}

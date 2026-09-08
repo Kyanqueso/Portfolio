@@ -4,7 +4,7 @@ import ExperienceItem from '../components/ExperienceItem.jsx'
 import ToolBadge from '../components/ToolBadge.jsx'
 import tools from '../data/tools.js'
 import projects from '../data/projects.js'
-import myPicture from '../assets/my_picture.jpg'
+import myPicture from '../assets/my_picture.png'
 import './Home.css'
 
 function Home() {

@@ -58,13 +58,13 @@ function ProjectCard({
         </div>
       </div>
 
-      <div className="w-full h-full min-h-64 rounded-xl bg-slate-100 flex items-center justify-center">
-        {image ? (
-          <img src={image} alt={title} className="w-full h-full object-cover rounded-xl" />
-        ) : (
+      {image ? (
+        <img src={image} alt={title} className="w-full h-auto rounded-xl" />
+      ) : (
+        <div className="w-full h-full min-h-64 rounded-xl bg-slate-100 flex items-center justify-center">
           <FaRegImage size={32} className="text-neutral-400" />
-        )}
-      </div>
+        </div>
+      )}
     </div>
   )
 }

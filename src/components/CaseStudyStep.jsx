@@ -8,8 +8,8 @@ const IMAGE_GRID_COLS = {
   4: 'grid-cols-2',
 }
 
-function CaseStudyStep({ icon, title, description, images = [], imageJoiner, figmaHref, imageNote, showConnector = true }) {
-  const gridCols = IMAGE_GRID_COLS[Math.min(images.length, 4)]
+function CaseStudyStep({ icon, title, description, images = [], imageJoiner, figmaHref, imageNote, imageGridClass, showConnector = true }) {
+  const gridCols = imageGridClass || IMAGE_GRID_COLS[Math.min(images.length, 4)]
   const useJoinerLayout = imageJoiner && images.length > 1
 
   return (
@@ -46,7 +46,7 @@ function CaseStudyStep({ icon, title, description, images = [], imageJoiner, fig
                 <ZoomableImage
                   src={img.src}
                   alt={img.caption}
-                  className="w-full aspect-video object-cover rounded-xl border border-neutral-200"
+                  className="w-full h-auto rounded-xl border border-neutral-200"
                 />
                 <figcaption className="mt-2 text-sm text-neutral-500">{img.caption}</figcaption>
               </figure>
@@ -59,13 +59,13 @@ function CaseStudyStep({ icon, title, description, images = [], imageJoiner, fig
       )}
 
       {images.length > 0 && !useJoinerLayout && (
-        <div className={`mt-8 grid ${gridCols} gap-6 w-full`}>
+        <div className={`mt-8 grid ${gridCols} gap-6 w-full items-start`}>
           {images.map((img) => (
             <figure key={img.caption}>
               <ZoomableImage
                 src={img.src}
                 alt={img.caption}
-                className="w-full aspect-video object-cover rounded-xl border border-neutral-200"
+                className="w-full h-auto rounded-xl border border-neutral-200"
               />
               <figcaption className="mt-2 text-sm text-neutral-500">{img.caption}</figcaption>
             </figure>
