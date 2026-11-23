@@ -1,9 +1,17 @@
-import { Outlet } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import Footer from './Footer.jsx'
 import Lightbox from './Lightbox.jsx'
 
 function Layout() {
+  const { pathname } = useLocation()
+
+  // BrowserRouter keeps the previous page's scroll position; start each page at the top.
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
     <>
       <nav className="flex items-center gap-4 py-4 px-8 font-bold">
