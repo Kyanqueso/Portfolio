@@ -118,7 +118,7 @@ const projects = [
     title: 'Magic Touch Console',
     description:
       'A custom web-based ERP built solo for a printing press company, bringing disconnected processes into one unified system and replacing spreadsheets with a structured way to manage daily operations.',
-    tags: ['React', 'Quarkus', 'AWS Lambda', 'Supabase'],
+    tags: ['React', 'Spring Boot', 'AWS Lambda', 'Supabase'],
     image: mtchome,
     demoHref: 'https://mtcdemo.charlesque404.workers.dev/login',
     githubHref: 'https://github.com/Kyanqueso/magic_touch_console',
@@ -171,7 +171,7 @@ const projects = [
       {
         icon: '🚀',
         title: 'Shipping It',
-        description: 'Deployed it with React, Quarkus, AWS Lambda, and Supabase.',
+        description: 'Deployed it with React, Spring Boot, AWS Lambda, and Supabase.',
         images: [],
       },
       {
